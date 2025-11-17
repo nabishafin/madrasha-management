@@ -21,9 +21,7 @@ export default function RootLayout({ children }) {
         <Sidebar isOpen={sidebarOpen} />
         <div className="flex-1 flex flex-col overflow-hidden">
           <Header onMenuClick={() => setSidebarOpen(!sidebarOpen)} />
-          <main className="flex-1 overflow-auto px-5  py-2 border-2 ">
-            {children}
-          </main>
+          <main className="flex-1 overflow-auto px-5  py-2  ">{children}</main>
         </div>
       </body>
     </html>
