@@ -1,5 +1,7 @@
 import { useState } from "react";
-import { Pencil, X } from "lucide-react";
+import { MousePointerClick, Pencil, X } from "lucide-react";
+import Image from "next/image";
+import profileImage from "../../../../public/studentprofile.jpg";
 
 export default function StudentInfo() {
   const [selectedAction, setSelectedAction] = useState("");
@@ -8,28 +10,15 @@ export default function StudentInfo() {
   return (
     <div>
       <div className=" mx-auto bg-[#F7F7F7] rounded-lg shadow-sm">
-        {/* Header */}
-        <div className="flex items-center justify-between border-b px-8 py-6">
-          <h1 className="text-2xl font-semibold text-gray-800">
-            শিক্ষার্থীর তথ্য
-          </h1>
-          <button
-            onClick={() => setShowModal(true)}
-            className="flex items-center gap-2 px-4 py-2 border border-gray-300 rounded-md hover:bg-gray-50 transition-colors"
-          >
-            <Pencil className="w-4 h-4" />
-            <span>Edit</span>
-          </button>
-        </div>
 
         <div className="p-8">
           <div className="flex gap-8">
             {/* Left Side - Profile Image */}
             <div className="relative">
-              <img
-                src="https://api.placeholder.com/150/150"
+              <Image
+                src={profileImage}
                 alt="Profile"
-                className="w-40 h-40 rounded-lg object-cover"
+                className="w-40 h-60 rounded-lg object-cover"
               />
               <button className="absolute bottom-2 right-2 bg-white rounded-full p-2 shadow-md hover:bg-gray-50 transition-colors">
                 <Pencil className="w-4 h-4 text-gray-600" />
@@ -40,77 +29,97 @@ export default function StudentInfo() {
             <div className="flex-1">
               {/* Basic Info */}
               <div className="mb-8">
-                <h2 className="text-lg font-semibold text-gray-700 mb-4">
-                  ব্যক্তিগত তথ্য
-                </h2>
-                <div className="grid grid-cols-3 gap-x-8 gap-y-4">
+                <div className="flex justify-between items-center">
+                  <h2 className="text-xl font-semibold text-[#246545] mb-4">
+                    শিক্ষার্থীর তথ্য
+                  </h2>
+                  <button
+                    onClick={() => setShowModal(true)}
+                    className="flex items-center text-[#2B7752] font-semi-bold gap-2 px-4 py-[6px] border-[1px] bg-[#E7FEF2] border-[#2B7752] rounded-md hover:bg-[#E7FEF2] transition-colors"
+                  >
+                    <Pencil className="w-4 h-4" />
+                    <span>Edit</span>
+                  </button>
+                </div>
+                <div className="flex items-center gap-2 w-full mt-5">
+                  <h1 className="text-[#63736C] text-lg font-semibold whitespace-nowrap">
+                    ব্যক্তিগত তথ্য
+                  </h1>
+                  <div className="h-[1px] w-full bg-[#92A09A]"></div>
+                </div>
+
+
+                <div className="grid grid-cols-3 gap-x-8 gap-y-4 mt-2">
                   <div>
-                    <p className="text-sm text-gray-600 mb-1">নাম</p>
-                    <p className="text-gray-800">মোঃ আরিফুল ইসলাম খান</p>
+                    <p className="text-sm text-[#63736C] font-semibold   mb-1">নাম</p>
+                    <p className="text-[#424D47] font-semibold">মোঃ আরিফুল ইসলাম খান</p>
                   </div>
                   <div>
-                    <p className="text-sm text-gray-600 mb-1">জন্ম তারিখ</p>
-                    <p className="text-gray-800">১৩ জানুয়ারি ২০২০ , ৫ বছর</p>
+                    <p className="text-sm text-[#63736C] font-semibold mb-1">জন্ম তারিখ</p>
+                    <p className="text-[#424D47] font-semibold">১৩ জানুয়ারি ২০২০ , ৫ বছর</p>
                   </div>
                   <div>
-                    <p className="text-sm text-gray-600 mb-1">জন্মসন/NID</p>
-                    <p className="text-gray-800">৯৮৪৬৩৭৩৮৭৪৭৪০৯৮</p>
+                    <p className="text-sm text-[#63736C] font-semibold mb-1">জন্মসন/NID</p>
+                    <p className="text-[#424D47] font-semibold">৯৮৪৬৩৭৩৮৭৪৭৪০৯৮</p>
                   </div>
                   <div>
-                    <p className="text-sm text-gray-600 mb-1">জেলার</p>
-                    <p className="text-gray-800">রাজের গ্রম</p>
+                    <p className="text-sm text-[#63736C] font-semibold mb-1">জেন্ডার</p>
+                    <p className="text-[#424D47] font-semibold">ছাত্র</p>
                   </div>
                   <div>
-                    <p className="text-sm text-gray-600 mb-1">ছবি</p>
-                    <p className="text-gray-800">O+</p>
+                    <p className="text-sm text-[#63736C] font-semibold mb-1">ছবি</p>
+                    <p className="text-[#424D47] font-semibold">O+</p>
                   </div>
                   <div>
-                    <p className="text-sm text-gray-600 mb-1">মোবাইল নম্বর</p>
-                    <p className="text-gray-800">+৮৮০১৭৭৫৬৬৩০৩৬</p>
+                    <p className="text-sm text-[#63736C] font-semibold mb-1">মোবাইল নম্বর</p>
+                    <p className="text-[#424D47] font-semibold">+৮৮০১৭৭৫৬৬৩০৩৬</p>
                   </div>
                 </div>
               </div>
 
               {/* Academic Info */}
-              <div className="border-t pt-6">
-                <h2 className="text-lg font-semibold text-gray-700 mb-4">
-                  প্রাতিষ্ঠানিক তথ্য
-                </h2>
-                <div className="grid grid-cols-3 gap-x-8 gap-y-4">
+              <div className=" pt-6">
+                <div className="flex items-center gap-2 w-full mt-5">
+                  <h1 className="text-[#63736C] text-lg font-semibold whitespace-nowrap">
+                    প্রাতিষ্ঠানিক তথ্য
+                  </h1>
+                  <div className="h-[1px] w-full bg-[#92A09A]"></div>
+                </div>
+                <div className="grid grid-cols-3 gap-x-8 gap-y-4 mt-2">
                   <div>
-                    <p className="text-sm text-gray-600 mb-1">আইডি</p>
-                    <p className="text-gray-800">DUMS01</p>
+                    <p className="text-sm text-[#63736C] font-semibold mb-1">আইডি</p>
+                    <p className="text-[#424D47] font-semibold">DUMS01</p>
                   </div>
                   <div>
-                    <p className="text-sm text-gray-600 mb-1">আবাসিক তরখা</p>
-                    <p className="text-gray-800">আবাসিক</p>
+                    <p className="text-sm text-[#63736C] font-semibold mb-1">আবাসিক তরখা</p>
+                    <p className="text-[#424D47] font-semibold">আবাসিক</p>
                   </div>
                   <div></div>
 
                   <div>
-                    <p className="text-sm text-gray-600 mb-1">রোল নম্বর</p>
-                    <p className="text-gray-800">২</p>
+                    <p className="text-sm text-[#63736C] font-semibold mb-1">রোল নম্বর</p>
+                    <p className="text-[#424D47] font-semibold">২</p>
                   </div>
                   <div>
-                    <p className="text-sm text-gray-600 mb-1">শ্রেণী</p>
-                    <p className="text-gray-800">নার্সারি</p>
+                    <p className="text-sm text-[#63736C] font-semibold mb-1">শ্রেণী</p>
+                    <p className="text-[#424D47] font-semibold">নার্সারি</p>
                   </div>
                   <div>
-                    <p className="text-sm text-gray-600 mb-1">শাখা</p>
-                    <p className="text-gray-800">ক</p>
+                    <p className="text-sm text-[#63736C] font-semibold mb-1">শাখা</p>
+                    <p className="text-[#424D47] font-semibold">ক</p>
                   </div>
 
                   <div>
-                    <p className="text-sm text-gray-600 mb-1">শিফট</p>
-                    <p className="text-gray-800">সকাল</p>
+                    <p className="text-sm text-[#63736C] font-semibold mb-1">শিফট</p>
+                    <p className="text-[#424D47] font-semibold">সকাল</p>
                   </div>
                   <div>
-                    <p className="text-sm text-gray-600 mb-1">বিভাগ</p>
-                    <p className="text-gray-800">স্বুরানী</p>
+                    <p className="text-sm text-[#63736C] font-semibold mb-1">বিভাগ</p>
+                    <p className="text-[#424D47] font-semibold">স্বুরানী</p>
                   </div>
                   <div>
-                    <p className="text-sm text-gray-600 mb-1">সেসন</p>
-                    <p className="text-gray-800">২৪ - ২৫</p>
+                    <p className="text-sm text-[#63736C] font-semibold mb-1">সেসন</p>
+                    <p className="text-[#424D47] font-semibold">২৪ - ২৫</p>
                   </div>
                 </div>
               </div>
@@ -118,41 +127,34 @@ export default function StudentInfo() {
           </div>
 
           {/* Action Buttons */}
-          <div className="flex gap-4 mt-8 pt-6 border-t">
-            <button className="px-6 py-3 bg-green-700 text-white rounded-md hover:bg-green-800 transition-colors font-medium">
-              অন্যান্য তথ্য
-            </button>
-            <button className="px-6 py-3 border border-gray-300 rounded-md hover:bg-gray-50 transition-colors">
-              ব্যাক্তিগত হিসাব
-            </button>
-            <div className="flex-1 flex items-center gap-4 ml-auto">
-              <select
-                value={selectedAction}
-                onChange={(e) => setSelectedAction(e.target.value)}
-                className="flex-1 px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
-              >
-                <option value="">আ্যাকশন পছন্দ করুন</option>
-                <option value="edit">সম্পাদনা করুন</option>
-                <option value="delete">মুছে ফেলুন</option>
-                <option value="print">প্রিন্ট করুন</option>
-              </select>
-              <button className="px-6 py-3 bg-green-700 text-white rounded-md hover:bg-green-800 transition-colors font-medium flex items-center gap-2">
-                <svg
-                  className="w-5 h-5"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M13 7l5 5m0 0l-5 5m5-5H6"
-                  />
-                </svg>
-                আ্যাকশন
+          <div className="flex justify-between items-center mt-8 gap-4">
+            <div className="flex gap-2">
+              <button className="px-6 py-2 font-semibold bg-[#2B7752] text-white rounded-md hover:bg-green-800 transition-colors ">
+                অন্যান্য তথ্য
+              </button>
+              <button className="px-6 py-2 border border-gray-300 rounded-md hover:bg-gray-50 transition-colors">
+                ব্যাক্তিগত হিসাব
               </button>
             </div>
+            <div className="flex gap-2 items-center">
+              <div>
+                <select
+                  value={selectedAction}
+                  onChange={(e) => setSelectedAction(e.target.value)}
+                  className="flex-1 px-6 py-2 border border-[#A2AFA8] text-[#63736C] rounded-md focus:outline-none focus:ring-2 focus:ring-[#63736C]"
+                >
+                  <option value="">আ্যাকশন পছন্দ করুন</option>
+                  <option value="edit">সম্পাদনা করুন</option>
+                  <option value="delete">মুছে ফেলুন</option>
+                  <option value="print">প্রিন্ট করুন</option>
+                </select>
+
+              </div>
+              <button className="px-4 py-[6px] text-white border-2 rounded-md text-sm flex items-center gap-2 font-semibold bg-[#2B7752]">
+                <MousePointerClick className="mb-1" /> অ্যাকশন
+              </button>
+            </div>
+
           </div>
         </div>
       </div>
@@ -163,7 +165,7 @@ export default function StudentInfo() {
           <div className="bg-white rounded-lg w-full max-w-2xl max-h-[90vh] overflow-y-auto bl">
             {/* Modal Header */}
             <div className="flex items-center justify-between p-6 border-b sticky top-0 ">
-              <h2 className="text-xl font-semibold text-gray-800">
+              <h2 className="text-xl font-semibold text-[#246545]">
                 ব্যক্তিগত তথ্য
               </h2>
               <button
@@ -349,7 +351,7 @@ export default function StudentInfo() {
 
               {/* Action Buttons */}
               <div className="flex gap-4 mt-6">
-                <button className="px-6 py-2 bg-green-700 text-white rounded-md hover:bg-green-800 transition-colors">
+                <button className="px-6 py-2 bg-[#2B7752] text-white rounded-md hover:bg-green-800 transition-colors">
                   সেভ করুন
                 </button>
                 <button
