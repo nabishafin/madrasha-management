@@ -13,15 +13,15 @@ export default function AdmissionExamInfo() {
     <div className=" bg-[#F7F7F7] mt-10">
       <div className=" mx-auto">
         {/* Main Content */}
-        <div className="bg-white rounded-lg shadow-sm">
+        <div className="bg-[#F7F7F7] rounded-lg shadow-sm">
           {/* Header */}
           <div className="flex items-center justify-between border-b border-dashed border-gray-300 px-6 py-4">
-            <h1 className="text-xl font-semibold text-green-700">
+            <h1 className="text-xl font-semibold text-[#246545]">
               ভর্তি পরীক্ষা সংক্রান্ত
             </h1>
             <button
               onClick={() => setIsModalOpen(true)}
-              className="flex items-center gap-2 px-4 py-2 border border-green-600 text-green-700 rounded-md hover:bg-green-50 transition-colors"
+              className="flex items-center text-[#2B7752] font-semi-bold gap-2 px-4 py-[6px] border-[1px] bg-[#E7FEF2] border-[#2B7752] rounded-md hover:bg-[#E7FEF2] transition-colors"
             >
               <Pencil className="w-4 h-4" />
               <span>Edit</span>
@@ -30,18 +30,22 @@ export default function AdmissionExamInfo() {
 
           <div className="p-6">
             <div className="grid grid-cols-2 gap-8">
-              {/* পরীক্ষকের নাম / মূল্যায়ন কারী */}
+              {/* পরীক্ষকের নাম */}
               <div>
-                <p className="text-sm text-gray-600 mb-2">
+                <p className="text-sm text-[#63736C] mb-2">
                   পরীক্ষকের নাম / মূল্যায়ন কারী
                 </p>
-                <p className="text-sm text-gray-800">{examInfo.examinerName}</p>
+                <p className="text-sm text-[#424D47] font-semibold">
+                  {examInfo.examinerName}
+                </p>
               </div>
 
               {/* ফলাফল */}
               <div>
-                <p className="text-sm text-gray-600 mb-2">ফলাফল</p>
-                <p className="text-sm text-gray-800">{examInfo.examResult}</p>
+                <p className="text-sm text-[#63736C] mb-2">ফলাফল</p>
+                <p className="text-sm text-[#424D47] font-semibold">
+                  {examInfo.examResult}
+                </p>
               </div>
             </div>
           </div>
@@ -51,18 +55,27 @@ export default function AdmissionExamInfo() {
       {/* Edit Modal */}
       {isModalOpen && (
         <div className="fixed inset-0 bg-black/50 bg-opacity-50 flex items-center justify-center p-4 z-50">
-          <div className="bg-white rounded-xl max-w-md w-full shadow-2xl">
-            {/* Modal Header */}
-            <div className="px-8 pt-8 pb-6">
-              <h2 className="text-xl font-semibold text-gray-800">
+          <div className="bg-[#F7F7F7] rounded-xl max-w-md w-full shadow-2xl">
+
+            {/* Modal Header + X Button */}
+            <div className="px-8 pt-8 pb-6 border-b border-dashed border-gray-300 flex items-center justify-between">
+              <h2 className="text-xl font-semibold text-[#246545]">
                 ভর্তি পরীক্ষা সংক্রান্ত
               </h2>
+
+              {/* ❌ Close Button */}
+              <button
+                onClick={() => setIsModalOpen(false)}
+                className="text-gray-500 hover:text-gray-800 transition"
+              >
+                <X className="w-6 h-6" />
+              </button>
             </div>
 
             <div className="px-8 pb-8">
-              {/* পরীক্ষকের নাম / মূল্যায়ন কারী */}
+              {/* পরীক্ষকের নাম */}
               <div className="mb-5">
-                <label className="block text-sm text-gray-700 mb-2">
+                <label className="block text-sm text-[#63736C] mb-2">
                   পরীক্ষকের নাম / মূল্যায়ন কারী
                 </label>
                 <input
@@ -92,9 +105,10 @@ export default function AdmissionExamInfo() {
 
               {/* Action Buttons */}
               <div className="flex gap-3">
-                <button className="flex-1 px-6 py-3 bg-green-700 text-white rounded-md hover:bg-green-800 transition-colors font-medium">
+                <button className="flex-1 px-6 py-3 bg-[#2B7752] text-white rounded-md hover:bg-[#246545] transition-colors font-medium">
                   সেভ করুন
                 </button>
+
                 <button
                   onClick={() => setIsModalOpen(false)}
                   className="flex-1 px-6 py-3 border border-gray-300 text-gray-700 rounded-md hover:bg-gray-50 transition-colors font-medium"
@@ -103,6 +117,7 @@ export default function AdmissionExamInfo() {
                 </button>
               </div>
             </div>
+
           </div>
         </div>
       )}

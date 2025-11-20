@@ -1,4 +1,3 @@
-// src/app/(pages)/students/[id]/page.js
 "use client";
 
 import AcademicYearInfo from "@/app/components/StudentInfoComponent/AcademicYearInfo";
@@ -7,6 +6,8 @@ import FamilyInfo from "@/app/components/StudentInfoComponent/FamilyInfo";
 import GuardianInfo from "@/app/components/StudentInfoComponent/GuardianInfo";
 import StudentAdmissionReceipt from "@/app/components/StudentInfoComponent/StudentAdmissionReceipt";
 import StudentInfo from "@/app/components/StudentInfoComponent/StudentInfo";
+import AdmissionExamInfo from "@/app/components/StudentInfoComponent/AdmissionExamInfo";
+
 import { useParams } from "next/navigation";
 
 export default function StudentDetailsPage() {
@@ -19,6 +20,7 @@ export default function StudentDetailsPage() {
       <AddressInfo />
       <GuardianInfo />
       <AcademicYearInfo />
+      <AdmissionExamInfo />
       <StudentAdmissionReceipt />
     </div>
   );
