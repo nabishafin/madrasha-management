@@ -9,20 +9,20 @@ export default function FamilyInfo() {
       <div className=" mx-auto flex gap-6 mt-10">
         {/* Left Sidebar */}
         <div className="w-64 bg-[#F7F7F7] rounded-lg shadow-sm p-4">
-          <h2 className="text-lg font-semibold text-gray-800 mb-4">
+          <h2 className="text-lg font-semibold text-[#246545] mb-4">
             অভিভাবকের তথ্য
           </h2>
           <ul className="space-y-2">
-            <li className="text-sm text-gray-700 py-2 px-3 hover:bg-gray-50 rounded cursor-pointer">
+            <li className="text-sm text-[#63736C] py-2 px-3 hover:bg-gray-50 rounded cursor-pointer font-semibold ">
               ঠিকানা
             </li>
-            <li className="text-sm text-gray-700 py-2 px-3 hover:bg-gray-50 rounded cursor-pointer">
+            <li className="text-sm text-[#63736C] py-2 px-3 hover:bg-gray-50 rounded cursor-pointer font-semibold">
               পূর্বতন মাদ্রাসার তথ্য
             </li>
-            <li className="text-sm text-gray-700 py-2 px-3 hover:bg-gray-50 rounded cursor-pointer">
+            <li className="text-sm text-[#63736C]  py-2 px-3 hover:bg-gray-50 rounded cursor-pointer font-semibold">
               আর্থিক মুরব্বি / স্থানীয় মুরব্বি
             </li>
-            <li className="text-sm text-gray-700 py-2 px-3 hover:bg-gray-50 rounded cursor-pointer">
+            <li className="text-sm text-[#63736C] py-2 px-3 hover:bg-gray-50 rounded cursor-pointer font-semibold">
               ভর্তি পরীক্ষার সনদাংশ
             </li>
           </ul>
@@ -32,12 +32,12 @@ export default function FamilyInfo() {
         <div className="flex-1 bg-[#F7F7F7] rounded-lg shadow-sm">
           {/* Header */}
           <div className="flex items-center justify-between border-b px-6 py-4">
-            <h1 className="text-xl font-semibold text-gray-800">
+            <h1 className="text-xl font-semibold text-[#246545]">
               অভিভাবকের তথ্য
             </h1>
             <button
               onClick={() => setShowModal(true)}
-              className="flex items-center gap-2 px-4 py-2 border border-green-600 text-green-700 rounded-md hover:bg-green-50 transition-colors"
+              className="flex items-center text-[#2B7752] font-semi-bold gap-2 px-4 py-[6px] border-[1px] bg-[#E7FEF2] border-[#2B7752] rounded-md hover:bg-[#E7FEF2] transition-colors"
             >
               <Pencil className="w-4 h-4" />
               <span>Edit</span>
@@ -47,73 +47,73 @@ export default function FamilyInfo() {
           <div className="p-6">
             {/* পিতার তথ্য */}
             <div className="mb-8">
-              <h3 className="text-base font-semibold text-gray-700 mb-4 pb-2 border-b">
+              <h3 className="text-base font-semibold text-[#63736C] mb-4 pb-2 border-b">
                 পিতার তথ্য
               </h3>
               <div className="grid grid-cols-3 gap-8">
                 <div>
-                  <p className="text-sm text-gray-600 mb-1">নাম</p>
-                  <p className="text-sm text-gray-800">
+                  <p className="text-sm text-[#63736C] font-semibold mb-1">নাম</p>
+                  <p className="text-sm text-[#424D47] font-semibold">
                     মোঃ আবদুল্লাহ রহমান খান
                   </p>
                 </div>
                 <div>
-                  <p className="text-sm text-gray-600 mb-1">মোবাইল নম্বর</p>
-                  <p className="text-sm text-gray-800">+৮৮০১৭৯৫৬৯৩০১৯</p>
+                  <p className="text-sm text-[#63736C] font-semibold mb-1">মোবাইল নম্বর</p>
+                  <p className="text-sm text-[#424D47] font-semibold">+৮৮০১৭৯৫৬৯৩০১৯</p>
                 </div>
                 <div>
-                  <p className="text-sm text-gray-600 mb-1">NID</p>
-                  <p className="text-sm text-gray-800">৯৪৯৮৫৯৫১৮৭৯৫১৮৯</p>
+                  <p className="text-sm text-[#63736C] font-semibold mb-1">NID</p>
+                  <p className="text-sm text-[#424D47] font-semibold">৯৪৯৮৫৯৫১৮৭৯৫১৮৯</p>
                 </div>
               </div>
             </div>
 
             {/* মাতার তথ্য */}
             <div className="mb-8">
-              <h3 className="text-base font-semibold text-gray-700 mb-4 pb-2 border-b">
+              <h3 className="text-base font-semibold text-[#63736C] mb-4 pb-2 border-b">
                 মাতার তথ্য
               </h3>
               <div className="grid grid-cols-3 gap-8">
                 <div>
-                  <p className="text-sm text-gray-600 mb-1">নাম</p>
-                  <p className="text-sm text-gray-800">
+                  <p className="text-sm text-[#63736C] font-semibold mb-1">নাম</p>
+                  <p className="text-sm text-[#424D47] font-semibold">
                     মোঃ আবদুল্লাহ রহমান খান
                   </p>
                 </div>
                 <div>
-                  <p className="text-sm text-gray-600 mb-1">মোবাইল নম্বর</p>
-                  <p className="text-sm text-gray-800">+৮৮০১৭৯৫৬৯৩০১৯</p>
+                  <p className="text-sm text-[#63736C] font-semibold  mb-1">মোবাইল নম্বর</p>
+                  <p className="text-sm text-[#424D47] font-semibold">+৮৮০১৭৯৫৬৯৩০১৯</p>
                 </div>
                 <div>
-                  <p className="text-sm text-gray-600 mb-1">NID</p>
-                  <p className="text-sm text-gray-800">৯৪৯৮৫৯৫১৮৭৯৫১৮৯</p>
+                  <p className="text-sm text-[#63736C] font-semibold mb-1">NID</p>
+                  <p className="text-sm text-[#424D47] font-semibold">৯৪৯৮৫৯৫১৮৭৯৫১৮৯</p>
                 </div>
               </div>
             </div>
 
             {/* অভিভাবকের তথ্য */}
             <div>
-              <h3 className="text-base font-semibold text-gray-700 mb-4 pb-2 border-b">
+              <h3 className="text-base font-semibold text-[#63736C] mb-4 pb-2 border-b">
                 অভিভাবকের তথ্য
               </h3>
               <div className="grid grid-cols-4 gap-8">
                 <div>
-                  <p className="text-sm text-gray-600 mb-1">সম্পর্ক</p>
-                  <p className="text-sm text-gray-800">পিতা</p>
+                  <p className="text-sm text-[#63736C] font-semibold mb-1">সম্পর্ক</p>
+                  <p className="text-sm text-[#424D47] font-semibold">পিতা</p>
                 </div>
                 <div>
-                  <p className="text-sm text-gray-600 mb-1">নাম</p>
-                  <p className="text-sm text-gray-800">
+                  <p className="text-sm text-[#63736C] font-semibold mb-1">নাম</p>
+                  <p className="text-sm text-[#424D47] font-semibold">
                     মোঃ আবদুল্লাহ রহমান খান
                   </p>
                 </div>
                 <div>
-                  <p className="text-sm text-gray-600 mb-1">মোবাইল নম্বর</p>
-                  <p className="text-sm text-gray-800">+৮৮০১৭৯৫৬৯৩০১৯</p>
+                  <p className="text-sm text-[#63736C] font-semibold mb-1">মোবাইল নম্বর</p>
+                  <p className="text-sm text-[#424D47] font-semibold">+৮৮০১৭৯৫৬৯৩০১৯</p>
                 </div>
                 <div>
-                  <p className="text-sm text-gray-600 mb-1">NID</p>
-                  <p className="text-sm text-gray-800">৯৪৯৮৫৯৫১৮৭৯৫১৮৯</p>
+                  <p className="text-sm text-[#63736C] font-semibold mb-1">NID</p>
+                  <p className="text-sm text-[#424D47] font-semibold">৯৪৯৮৫৯৫১৮৭৯৫১৮৯</p>
                 </div>
               </div>
             </div>
@@ -128,7 +128,7 @@ export default function FamilyInfo() {
             {/* Modal Header */}
             <div className="p-6 border-b border-dashed border-gray-300">
               <div className="flex items-center justify-between">
-                <h2 className="text-lg font-semibold text-gray-800">
+                <h2 className="text-lg font-semibold text-[#246545]">
                   পিতা-মাতা ও অভিভাবকের তথ্য
                 </h2>
                 <button
@@ -144,7 +144,7 @@ export default function FamilyInfo() {
             <div className="p-6">
               {/* পিতার তথ্য */}
               <div className="mb-6 border border-dashed border-gray-300 p-4 rounded">
-                <h3 className="text-sm font-semibold text-gray-700 mb-4">
+                <h3 className="text-sm font-semibold text-[#63736C] mb-4">
                   পিতার তথ্য
                 </h3>
 
@@ -280,20 +280,19 @@ export default function FamilyInfo() {
 
               {/* Note */}
               <p className="text-xs text-gray-600 mb-4 p-3 bg-gray-50 rounded border border-dashed border-gray-300">
-                আ্যাকাউন্টের তথ্য যাচাইয়ের জন্য সকল তথ্য সঠিক ভাবে তুলনাপূর্বক
-                জমা করুন। যদি 'অন্য' নতুন শিক্ষার্থীর তথ্যটি আপডেট করা থাকে।
+                আপডেটকৃত তথ্য সংরক্ষণ করতে 'সেভ করুন' বাটনে ক্লিক করুন অথবা 'ক্যানসেল' করুন।
               </p>
 
               {/* Action Buttons */}
               <div className="flex gap-3">
-                <button className="px-6 py-2 bg-green-700 text-white rounded text-sm hover:bg-green-800 transition-colors">
+                <button className="px-6 py-2 bg-[#246545] text-white rounded text-sm hover:bg-green-800 transition-colors">
                   সেভ করুন
                 </button>
                 <button
                   onClick={() => setShowModal(false)}
                   className="px-6 py-2 border border-gray-300 text-gray-700 rounded text-sm hover:bg-gray-50 transition-colors"
                 >
-                  আপডেটের করুন
+                  ক্যানসেল করুন
                 </button>
               </div>
             </div>
